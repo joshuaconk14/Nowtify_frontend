@@ -57,7 +57,6 @@ useEffect(() => {
 
 return (
   <div className="App">
-    <h1>Nowtify</h1>
     <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
   </div>
 );
