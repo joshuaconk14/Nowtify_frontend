@@ -1,8 +1,10 @@
-import React, {useState, useEffect} from "react";
+import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
+import './home.css'; // import CSS styling
 // import { BrowserRouter as useNavigate} from "react-router-dom";
 
 function Home() {
+
 
   // step 1) state variable for login / reg link, set false first
   const [goToLogin, setGoToLogin] = React.useState(false)
@@ -14,16 +16,15 @@ function Home() {
   }
 
 
-
-
   //  step 2) buttons have function call state variable to make it true
   return (
+    
     <div>
-      HOME PAGE
       <button onClick = { () => setGoToLogin(true)}>Login</button>
-      
     </div>
   );
+
+
 
   // const navigate = useNavigate();
 
