@@ -1,10 +1,10 @@
-/* Home.css */
+/* styling for home page */
 
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    justify-content: center; /* vertical*/
+    align-items: center; /* horizontal */
+    height: 100vh; /* height of container */
     margin: 0;
     background: linear-gradient(135deg, #6a0dad, #1e90ff);
     color: white;
@@ -17,6 +17,18 @@ h1 {
     animation: headerFade 2s ease-in-out forwards;
 }
 
+button {
+    animation: headerFade 2s ease-in-out forwards;
+    text-align: center; /* inside text only */
+    display: block;
+    margin: 20px auto; /* horizontal centering */
+    padding: 15px 30px; /* inside padding for bigger size */
+    font-size: 1.5em;
+    font-family: 'Arial'
+
+}
+
+/* defining the header's fade with headerFade */
 @keyframes headerFade {
     0% {
         opacity: 0;

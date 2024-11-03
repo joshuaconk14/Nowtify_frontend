@@ -20,6 +20,7 @@ function Home() {
   return (
     
     <div>
+      <h1>Nowtify</h1>
       <button onClick = { () => setGoToLogin(true)}>Login</button>
     </div>
   );
