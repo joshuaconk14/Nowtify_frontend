@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <h1>Nowtify</h1>
+    <style>
+        /* body = page gradient background */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh; /* height of container, not text */
+            margin: 0;
+            background: linear-gradient(135deg, #6a0dad, #1e90ff); /* first # is the angle of gradient */
+            color: white;
+            font-family: Arial
+
+        }
+
+        /* h1 = header styling */
+        h1{
+            font-size: 4em;
+            text-align: center;
+            animation: headerFade 2s ease-in-out forwards; /* Animation settings, forwards keeps it in current position instead of going back to old pos */
+        }
+        /* defines the animation */
+    @keyframes headerFade {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    </style>
+</head>
+<body>
+    <p>Welcome to Nowtify</p>
+</body>
+</html>
