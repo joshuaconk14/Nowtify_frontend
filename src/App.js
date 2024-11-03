@@ -1,69 +1,78 @@
-import React, {useState, useEffect} from 'react'
+import "./App.css";
+import React, {useState, useEffect} from "react";
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import Home from "./pages/home";
+import Login from "./pages/login";
+import Register from "./pages/register";
+
+// , {useState, useEffect}
 
 function App() {
+  // creating routes for importing pages
+  return (
+    <div className = "App">
+      <Router>
+        <Routes>
+          <Route path= "/" element={<Home />} />
+          <Route path= "/login" element={<Login />} />
+          <Route path= "/register" element={<Register />} />
+        </Routes>
+      </Router>
+    </div>
+  );
 
-//   const[data,setData] = useState([{}])
 
-//   useEffect(() => {
-//     fetch("/members").then(
-//       res => res.json()
-//     ).then(
-//         data => {
-//           setData(data)
-//           console.log(data)
-//       }
-//     )
-//   }, [])
+//   // BACKEND API
+//   const [message, setMessage] = useState("");
 
-//   return (
-//     <div>
-      
-//         {(typeof data.members === 'undefined') ? (
-//             <p>Loading...</p>
-//         ) : (
-//           data.members.map((member, i) => (
-//               <p key={i} > {member} </p>
-//           ))
-//         )}
-//     </div>
-//   )
-// }
+// useEffect(() => {
+//   fetch("/home")
+//     .then(res => res.json())
+//     .then(message => {
+//       setMessage(message); 
+//       // console.log(message);
+//     });
+// }, []);
 
-  // BACKEND API
 
-  // returning string in useState
-  const [message, setMessage] = useState("");
+//   // HOME API
+// const [homeContent, setHomeContent] = useState("");
 
-useEffect(() => {
-  fetch("/home")
-    .then(res => res.json())
-    .then(message => {
-      setMessage(message);
-      // console.log(message);
-    });
-}, []);
+// useEffect(() => {
+//   fetch(`${process.env.PUBLIC_URL}/home.html`)
+//     .then(res => res.text())
+//     .then((home) => {
+//       setHomeContent(home); // Store the HTML as a state variable
+//     })
+//     .catch((error) => console.error("Error loading Home Page:", error));
+// }, []);
 
-  // HTML API
-const [htmlContent, setHtmlContent] = useState("");
 
-useEffect(() => {
-  fetch(`${process.env.PUBLIC_URL}/home.html`)
-    .then(res => res.text())
-    .then((html) => {
-      setHtmlContent(html); // Store the HTML in state
-    })
-    .catch((error) => console.error("Error loading HTML:", error));
-}, []);
 
-return (
-  <div className="App">
-    <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
-  </div>
-);
+
+// // LOGIN API
+// const [loginContent, setLoginContent] = useState("");
+
+// useEffect(() => {
+//   fetch(`${process.env.PUBLIC_URL}/login.html`)
+//     .then(res => res.text())
+//     .then((login) => {
+//       setLoginContent(login); // Store the HTML as a state variable
+//     })
+//     .catch((error) => console.error("Error loading Login page:", error));
+// }, []);
+
+
+
+// return (
+//   <div className="App">
+//     <div dangerouslySetInnerHTML={{ __html: homeContent }} />
+//     <button></button>
+//   </div>
+// );
 
 
 }
-
 
 
 export default App

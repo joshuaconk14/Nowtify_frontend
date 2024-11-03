@@ -10,8 +10,8 @@
         /* body = page gradient background */
         body {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: center; /* horizontal */
+            align-items: center; /* vertical */
             height:100vh; /* height of container, not text */
             margin: 0;
             background: linear-gradient(135deg, #6a0dad, #1e90ff); /* first # is the angle of gradient */
@@ -40,6 +40,7 @@
     </style>
 </head>
 <body>
-    <p>Welcome to Nowtify</p>
+    <p>Welcome! Let's get started</p>
+    <button onClick="window.location.href='/login'">Login</button>
 </body>
 </html>
