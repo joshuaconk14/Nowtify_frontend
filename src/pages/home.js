@@ -8,11 +8,15 @@ function Home() {
 
   // step 1) state variable for login / reg link, set false first
   const [goToLogin, setGoToLogin] = React.useState(false)
+  const [goToRegister, setGoToRegister] = React.useState(false)
 
 
   // step 3) if state var = true, nav to login / reg
   if (goToLogin) {
     return <Navigate to = "/login"/>;
+  }
+  if (goToRegister) {
+    return <Navigate to = "/register"/>;
   }
 
 
@@ -21,7 +25,10 @@ function Home() {
     
     <div>
       <h1>Nowtify</h1>
-      <button onClick = { () => setGoToLogin(true)}>Login</button>
+      <p  class="slogan" >Find the perfect playlist for your now.</p>
+      <p>No account? Register your spotify account here</p>
+      <button onClick = { () => setGoToRegister(true)}>Register</button>
+      <button onClick = { () => setGoToLogin(true)} class="login-button" >Login</button>
     </div>
   );
 
