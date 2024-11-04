@@ -4,9 +4,10 @@
     position: absolute;
     font-size: 2.5em;
     top: 225px;
-    right: 300px;
+    right: 210px;
     margin-top: -50px; /* Moves header up */
     margin: 10px auto; /* padding */
+    color: black
 }
 
 .welcome-back-text {
@@ -15,4 +16,12 @@
     top: 350px;
     left: 220px;
     margin-top: -50px;
+}
+
+/* div is holding the text inside it and represents 'big rectangle' */
+.big-rectangle {
+    width: 1000px;
+    height: 650px;
+    background: linear-gradient(to right, #601099, #2782dd 60%, white 35%);
+    border-radius: 8px;
 }
