@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import { Navigate } from "react-router-dom";
 import './home.css'; // import CSS styling
+import './App.css'; // import whole app styling
 // import { BrowserRouter as useNavigate} from "react-router-dom";
 
 function Home() {
@@ -24,10 +25,10 @@ function Home() {
   return (
     
     <div>
-      <h1>Nowtify</h1>
-      <p  class="slogan" >Find the perfect playlist for your now.</p>
+      <h1 class="nowtify-header">Nowtify</h1>
+      <p class="slogan" >Find the perfect playlist for your now.</p>
       <p>No account? Register your spotify account here</p>
-      <button onClick = { () => setGoToRegister(true)}>Register</button>
+      <button onClick = { () => setGoToRegister(true)} class="register-button">Register</button>
       <button onClick = { () => setGoToLogin(true)} class="login-button" >Login</button>
     </div>
   );

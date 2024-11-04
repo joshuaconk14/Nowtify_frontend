@@ -1,30 +1,13 @@
 /* styling for home page */
+/* classes are specific for each object */
 
-body {
-    display: flex;
-    justify-content: center; /* vertical*/
-    flex-direction: column; /* Arranges header and buttons vertically */
-    align-items: center; /* horizontal */
-    height: 100vh; /* height of container */
-    margin: 0;
-    background: linear-gradient(135deg, #6a0dad, #1e90ff);
-
-    color: white; /* any text in the body */
-    font-family: Arial;
-}
-
-h1 {
-    font-size: 4em;
-    text-align: center;
+.nowtify-header {
     margin: 100px auto; /* padding */
     margin-top: -50px; /* Moves header up */
     animation: homeFade 2s ease-in-out forwards;
 }
 
-button {
-    text-align: center; /* inside text only */
-    display: block; /* buttons displayed vertically (column form) */
-    margin: 20px auto; /* padding */
+.register-button {
     padding: 10px 0; /* Removes padding on sides to maintain fixed width */
     width: 150px; /* Fixed width for same button size */
     font-size: 1.2em;
@@ -33,8 +16,6 @@ button {
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     animation: homeFade 2s ease-in-out forwards;
-
-
 }
 
 p {
@@ -44,7 +25,7 @@ p {
 
 /* class for login button */
 .login-button {
-    position: absolute;
+    position: absolute; /* wont be affected by other elements */
     top: 10px;
     right: 20px;
     width: 80px;
@@ -58,6 +39,7 @@ p {
     font-weight: bold;
     padding: 20px 0;
 }
+
 
 
 /* defining the header's fade with headerFade */
