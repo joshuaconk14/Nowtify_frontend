@@ -1,6 +1,6 @@
 /* styling for login button */
 
-.h1 {
+.login-header {
     position: absolute;
     font-size: 2.5em;
     top: 225px;
@@ -9,7 +9,7 @@
     margin: 10px auto; /* padding */
 }
 
-.p {
+.welcome-back-text {
     position: absolute;
     font-size: 3em;
     top: 350px;

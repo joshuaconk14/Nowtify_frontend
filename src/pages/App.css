@@ -1,6 +1,8 @@
 /* defining design for the whole app */
+/* on CSS files for the pages, 'classes' used to specify object being modified */
 
 body {
+    /* background */
     display: flex;
     height: 100vh; /* height of container */
     margin: 0;
@@ -9,6 +11,7 @@ body {
     align-items: center; /* horizontal */
     background: linear-gradient(135deg, #6a0dad, #1e90ff);
 
+    /* text */
     color: white; /* any text in the body */
     font-family: Arial;
 }
@@ -17,6 +20,12 @@ h1 {
     font-size: 4em;
     text-align: center;
 }
+
+
+p {
+    text-align: center;
+}
+
 
 button {
     text-align: center; /* inside text only */

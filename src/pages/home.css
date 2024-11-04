@@ -7,19 +7,7 @@
     animation: homeFade 2s ease-in-out forwards;
 }
 
-.register-button {
-    padding: 10px 0; /* Removes padding on sides to maintain fixed width */
-    width: 150px; /* Fixed width for same button size */
-    font-size: 1.2em;
-    border: none;
-    font-family: 'Arial';
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    animation: homeFade 2s ease-in-out forwards;
-}
-
-p {
-    text-align: center;
+.fade {
     animation: homeFade 2s ease-in-out forwards;
 }
 
@@ -31,6 +19,7 @@ p {
     width: 80px;
     padding: 10px 0;
     font-size: 1.0em;
+    animation: homeFade 2s ease-in-out forwards;
 }
 
 /* class for slogan */
@@ -38,6 +27,7 @@ p {
     font-size: 1.6em;
     font-weight: bold;
     padding: 20px 0;
+    animation: homeFade 2s ease-in-out forwards;
 }
 
 
