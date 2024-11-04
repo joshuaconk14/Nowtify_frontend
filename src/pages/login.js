@@ -7,6 +7,7 @@ function Login() {
       <div class="big-rectangle">
       <h1 class="login-header"> Login</h1>
       <p class="welcome-back-text">Welcome back!</p>
+      <div class="username-box"> username</div>
       </div>
     </div>
   );
