@@ -1,16 +1,10 @@
-import React from 'react'
-import './login.css'
+import React, {useEffect, useState} from 'react';
+import './login.css';
 
 function Login() {
-  return (
-    <div>
-      <div class="big-rectangle">
-      <h1 class="login-header"> Login</h1>
-      <p class="welcome-back-text">Welcome back!</p>
-      <div class="username-box"> username</div>
-      </div>
-    </div>
-  );
-}
 
-export default Login
+  const [goToUserAuth, setGoToUserAuth] = React.useState(false)
+
+  // use window.location.href when linking to pages in diff venv
+    // return null says to React don't run anything w < Navigate />
+      // window.location.hr
