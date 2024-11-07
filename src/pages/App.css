@@ -36,7 +36,4 @@ button {
     font-size: 1.2em;
     border: none;
     font-family: 'Arial';
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    cursor: pointer; /* pointer when hovering over button */
-}
+    border-radius: 

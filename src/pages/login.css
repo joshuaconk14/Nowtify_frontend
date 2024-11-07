@@ -7,7 +7,7 @@
     right: 475px;
     margin-top: -50px; /* Moves header up */
     margin: 10px auto; /* padding */
-    color: #7436a0;
+    color: #6834ba;
 }
 
 .welcome-back-text {
@@ -22,20 +22,21 @@
 .big-rectangle {
     width: 1000px;
     height: 650px;
-    background: linear-gradient(to right, #7436a0 60%, white 30%);
+    background: linear-gradient(to right, #6834ba 60%, white 30%);
     border-radius: 20px;
 }
+
+
+
 
 .username-box {
     position: absolute;
     border: 1px solid #606060; /* black border */
-    display: block; /* buttons displayed vertically (column form) */
     width: 300px;
     height: 60px;
     top: 330px;
-    right: 410px;
+    right: 390px;
     padding: 10px 0; /* Removes padding on sides to maintain fixed width */
-    width: 250px; /* Fixed width for same button size */
     border-radius: 20px;
     background-color: transparent;
     box-shadow: none;
@@ -54,9 +55,8 @@
     width: 300px;
     height: 60px;
     top: 420px;
-    right: 410px;
+    right: 390px;
     padding: 10px 0; /* Removes padding on sides to maintain fixed width */
-    width: 250px; /* Fixed width for same button size */
     border-radius: 20px;
     background-color: transparent;
     box-shadow: none;
@@ -70,11 +70,12 @@
 .spotify-login-button {
     position: absolute;
     top: 550px;
-    right: 460px;
+    right: 390px;
     display: block; /* buttons displayed vertically (column form) */
     margin: 20px auto; /* padding */
     padding: 10px 0; /* Removes padding on sides to maintain fixed width */
-    width: 150px; /* Fixed width for same button size */
+    width: 300px;
+    height: 60px;
     border: none;
     font-family: 'Arial';
     border-radius: 20px;

@@ -20,57 +20,6 @@ function App() {
     </div>
   );
 
-
-//   // BACKEND API
-//   const [message, setMessage] = useState("");
-
-// useEffect(() => {
-//   fetch("/home")
-//     .then(res => res.json())
-//     .then(message => {
-//       setMessage(message); 
-//       // console.log(message);
-//     });
-// }, []);
-
-
-//   // HOME API
-// const [homeContent, setHomeContent] = useState("");
-
-// useEffect(() => {
-//   fetch(`${process.env.PUBLIC_URL}/home.html`)
-//     .then(res => res.text())
-//     .then((home) => {
-//       setHomeContent(home); // Store the HTML as a state variable
-//     })
-//     .catch((error) => console.error("Error loading Home Page:", error));
-// }, []);
-
-
-
-
-// // LOGIN API
-// const [loginContent, setLoginContent] = useState("");
-
-// useEffect(() => {
-//   fetch(`${process.env.PUBLIC_URL}/login.html`)
-//     .then(res => res.text())
-//     .then((login) => {
-//       setLoginContent(login); // Store the HTML as a state variable
-//     })
-//     .catch((error) => console.error("Error loading Login page:", error));
-// }, []);
-
-
-
-// return (
-//   <div className="App">
-//     <div dangerouslySetInnerHTML={{ __html: homeContent }} />
-//     <button></button>
-//   </div>
-// );
-
-
 }
 
 
