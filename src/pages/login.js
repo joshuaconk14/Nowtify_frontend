@@ -3,8 +3,13 @@ import './login.css';
 
 function Login() {
 
+
+
   // state variable for spotify login
   const [goToUserAuth, setGoToUserAuth] = React.useState(false)
+
+
+
 
 
 
@@ -15,19 +20,21 @@ function Login() {
     window.location.href = "http://127.0.0.1:5003/spotify-login";
   }
 
+  // button setting variables to true
   return (
-    <div className="container">
-      <div className="big-rectangle">
-        <h1 className="login-header">Login</h1>
-        <p className="welcome-back-text">Welcome back!</p>
+    <div class ="container">
+      <div class="big-rectangle">
+        <h1 class="login-header">Login</h1>
+        <p class ="welcome-back-text">Welcome back!</p>
         
+    
         <form>
-          <input type="text" name="username" placeholder="username" className="username-box" />
-          <input type="password" name="password" placeholder="password" className="password-box" />
+          <input type="text" name="username" placeholder="username" class ="username-box" />
+          <input type="password" name="password" placeholder="password" class ="password-box" />
           <input type="submit" value="login" className="login-submit" />
         </form>
 
-        <button onClick={() => setGoToUserAuth(true)} className="spotify-login-button">
+        <button onClick={() => setGoToUserAuth(true)} class ="spotify-login-button">
           Login through Spotify
         </button>
       </div>
