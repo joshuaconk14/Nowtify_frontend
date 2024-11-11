@@ -1,13 +1,31 @@
-import React from 'react'
-import './dashboard.css'
+// import React, { useEffect, useState } from 'react';
+// import axios from 'axios';
+// import './dashboard.css';
 
-function dashboard() {
-  return (
-    <div>
-      <h1>Welcome, {{username}}!</h1>
-      <p>Welcome to your dashboard</p>
-    </div>
-  )
-}
+// function Dashboard() {
+//   const [username, setUsername] = useState('');
 
-export default dashboard
+//   useEffect(() => {
+//     const checkSession = async () => {
+//       try {
+//         const response = await axios.get('http://127.0.0.1:5000/session-check', { withCredentials: true });
+//         if (response.data.logged_in) {
+//           setUsername(response.data.username);
+//         } else {
+//           window.location.href = '/login';
+//         }
+//       } catch (error) {
+//         console.log("Session check failed", error);
+//       }
+//     };
+//     checkSession();
+//   }, []);
+
+//   return (
+//     <div>
+//       <h2>Welcome to your Dashboard {username}</h2>
+//     </div>
+//   );
+// }
+
+// export default Dashboard;
