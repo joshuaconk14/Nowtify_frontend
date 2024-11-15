@@ -7,3 +7,12 @@
     position: relative;
     bottom: 270px
 }
+
+.logout {
+    position: absolute; /* wont be affected by other elements */
+    top: 10px;
+    right: 20px;
+    width: 80px;
+    padding: 10px 0;
+    font-size: 1.0em;
+}

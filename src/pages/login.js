@@ -7,7 +7,7 @@ import './login.css';
 
 function Login() {
 
-   // state variable for main login
+  // state variables for main login (usrn , paswrd, and error msg)
   const [username, setUsername] = useState(''); // used in buttons
   const [password, setPassword] = useState(''); // used in buttons
   const [error, setError] = useState(''); // used in handleLogin funciton
@@ -60,6 +60,8 @@ function Login() {
             placeholder="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            id = "username" // ?
+            autoComplete = "username" // ?
             className="username-box"
           />
           <input
@@ -67,6 +69,8 @@ function Login() {
             placeholder="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            id = "password" // ?
+            autoComplete = "current-password" // ?
             className="password-box"
           />
           <button type="button" onClick={handleLogin} className="login-submit">

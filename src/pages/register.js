@@ -14,7 +14,7 @@ function Register() {
     try {
       e.preventDefault()
       const response = await axios.post(
-        'http://127.0.0.1:5003/register',
+        'http://127.0.0.1:5003/register', // POST to backend
         { username, password },
         { withCredentials: true }
       );
