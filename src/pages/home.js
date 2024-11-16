@@ -27,7 +27,7 @@ function Home() {
     <div>
       <h1 className="nowtify-header">Nowtify</h1>
       <p className="slogan" >Find the perfect playlist for your now.</p>
-      <p className="fade">No account? Register your spotify account here</p>
+      <p className="fade">No Spotify account? Create a general account here</p>
       <button onClick = { () => setGoToRegister(true)} className="fade">Register</button>
       <button onClick = { () => setGoToLogin(true)} className="login-button" >Login</button>
     </div>

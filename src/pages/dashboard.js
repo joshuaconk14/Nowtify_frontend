@@ -4,7 +4,7 @@ import './dashboard.css';
 
 function Dashboard() {
   const [user, setUser] = React.useState("");
-  // const [playlists, setPlaylists] = useState([]); // ##########
+  const [playlists, setPlaylists] = useState([]); // ##########
 
   // use Effect for /@me session verification / extracting info from that route
   useEffect (() => {
@@ -14,19 +14,46 @@ function Dashboard() {
           {
           withCredentials: true,
         });
-        console.log("Response from /@me:", response.data);
+        console.log("Response from /@me:", response.data); // test for response
         if (response.data.logged_in) {
           setUser(response.data.username);  // Sets the whole response, so we can access user.username
+          fetchPlaylists(); // fetch playlists after confirming user is logged in
         } else {
           window.location.href = '/login'; // Redirect if not logged in
         }
       } catch (error) {
-        console.error("Not authenticated", error);
+        console.error("Not authenticated", error); // test for error
       }
     };
 
-    checkSession()
+    checkSession();
+
   }, []);
+
+
+
+
+
+
+
+  // const for fetchPlaylists
+  const fetchPlaylists = async () => {
+    try {
+      const response = await axios.get('http://127.0.0.1:5003/playlists',
+        {
+          withCredentials: true,
+      });
+      console.log(response.data.playlists); // *** test for response ***
+      setPlaylists(response.data.playlists); // call setPlaylists function and give state var the playlist data
+    } catch (error) {
+      console.error("Error fetching playlists:", error);
+    }
+  };
+
+
+
+
+
 
 
 
@@ -53,6 +80,12 @@ function Dashboard() {
         <button type="button" onClick={logout} className="logout">
           Logout
         </button>
+        <h3>Your Playlists</h3>
+        <ul>
+          {playlists.map(playlist => (
+            <li key={playlist.id}>{playlist.name}</li> // Display each playlist name
+          ))}
+        </ul>
     </div>
   );
 }
