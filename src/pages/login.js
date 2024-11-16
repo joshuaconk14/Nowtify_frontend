@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import './login.css';
 
 
-
 function Login() {
 
   // state variables for main login (usrn , paswrd, and error msg)
@@ -21,6 +20,7 @@ function Login() {
       // pair it with await so can only move to next line of code until API call is complete
       // e is the event object for an event handler, represents event that occured
   const handleLogin = async (e) => {
+    console.log(username, password) // log in console to make sure data is coming back from backend
     try {
       e.preventDefault() // make it so that page doesn't refresh after login so error msg can stay
       // Send login request
@@ -32,6 +32,7 @@ function Login() {
 
       if (response.status === 200) {
         navigate('/dashboard'); // Redirect to dashboard on successful login
+        console.log('Login successful:', response.data);
       }
     } catch (error) {
       if (error.response && error.response.status === 401) {
@@ -54,14 +55,15 @@ function Login() {
       <div className="big-rectangle">
         <h1 className="login-header">Login</h1>
         <p className="welcome-back-text">Welcome back!</p>
-        <form>
+        <form onSubmit={handleLogin}>
           <input
             type="text"
             placeholder="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            id = "username" // ?
-            autoComplete = "username" // ?
+            required
+            id = "username"
+            autoComplete = "username"
             className="username-box"
           />
           <input
@@ -69,16 +71,17 @@ function Login() {
             placeholder="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            id = "password" // ?
-            autoComplete = "current-password" // ?
+            required
+            id = "password"
+            autoComplete = "current-password"
             className="password-box"
           />
-          <button type="button" onClick={handleLogin} className="login-submit">
+          <button type="submit" className="login-submit">
             Login
           </button>
           {error && <p className="error-msg">{error}</p>}
         </form>
-        <button onClick={() => setGoToUserAuth(true)} class ="spotify-login-button">
+        <button onClick={() => setGoToUserAuth(true)} className ="spotify-login-button">
           Login through Spotify
           </button>
       </div>

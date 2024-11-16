@@ -3,69 +3,33 @@ import axios from 'axios';
 import './dashboard.css';
 
 function Dashboard() {
-  const [username, setUsername] = useState('');
-  const [playlists, setPlaylists] = useState([]); // ##########
+  const [user, setUser] = React.useState("");
+  // const [playlists, setPlaylists] = useState([]); // ##########
 
-
-  // useEffect to set username for user
-  useEffect(() => {
-    const checkSession = async () => {
+  // use Effect for /@me session verification / extracting info from that route
+  useEffect (() => {
+    const checkSession = async() => {
       try {
         const response = await axios.get('http://127.0.0.1:5003/@me', 
-          { withCredentials: true }
-        );
-        if (response.data.logged_in) { // logged in status must be provided by /@me
-          setUsername(response.data.username);
-          // fetchPlaylists(); // ##########
+          {
+          withCredentials: true,
+        });
+        console.log("Response from /@me:", response.data);
+        if (response.data.logged_in) {
+          setUser(response.data.username);  // Sets the whole response, so we can access user.username
         } else {
-          window.location.href = '/login';
+          window.location.href = '/login'; // Redirect if not logged in
         }
       } catch (error) {
-        console.log("Session check failed", error);
+        console.error("Not authenticated", error);
       }
     };
-    checkSession();
+
+    checkSession()
   }, []);
 
 
 
-
-// ##########
-
-
-
-  // // Function to fetch playlists from the Flask backend
-  // const fetchPlaylists = async () => {
-  //   try {
-  //     const response = await fetch('http://127.0.0.1:5003/playlists', { // Replace with the correct URL for your /playlists endpoint
-  //         credentials: 'include' // Include credentials if necessary, such as cookies
-  //     });
-  //     if (!response.ok) {
-  //       throw new Error('Network response was not ok: ' + response.statusText);
-  //     }
-
-  //     const playlistsData = await response.json();
-  //     setPlaylists(playlistsData.items); // Save the fetched playlists to state
-  //   } catch (error) {
-  //     console.error('Error fetching playlists:', error);
-  //     // Optionally display an error message on the UI
-  //   }
-  // };
-
-
-  // // Function to display playlists on the UI
-  // const displayPlaylists = () => {
-  //   return playlists.map((playlist) => (
-  //     <div className="playlist" key={playlist.id}>
-  //       <h3>{playlist.name}</h3>
-  //       <img src={playlist.images[0]?.url} alt={playlist.name} />
-  //       <p>{playlist.description || 'No description available.'}</p>
-  //     </div>
-  //   ));
-  // };
-
-
-// ##########
 
 
   // logout
@@ -81,12 +45,14 @@ function Dashboard() {
   };
 
 
+  // Conditionally render content based on `user`
   return (
     <div>
-      <h1 className="hello">Hello, {username} (user)</h1>
-      <h2 className="welcome">Welcome to your Dashboard! </h2>
-      <button type = "button" onClick = {logout} className="logout">Logout</button>
-      {/* <div id = "playlists-container">{displayPlaylists()}</div> */}
+        <h1 className="hello">Hello, {user}!</h1>
+        <h2 className="welcome">Welcome to your Dashboard!</h2>
+        <button type="button" onClick={logout} className="logout">
+          Logout
+        </button>
     </div>
   );
 }

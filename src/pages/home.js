@@ -25,11 +25,11 @@ function Home() {
   return (
     
     <div>
-      <h1 class="nowtify-header">Nowtify</h1>
-      <p class="slogan" >Find the perfect playlist for your now.</p>
-      <p class="fade">No account? Register your spotify account here</p>
-      <button onClick = { () => setGoToRegister(true)} class="fade">Register</button>
-      <button onClick = { () => setGoToLogin(true)} class="login-button" >Login</button>
+      <h1 className="nowtify-header">Nowtify</h1>
+      <p className="slogan" >Find the perfect playlist for your now.</p>
+      <p className="fade">No account? Register your spotify account here</p>
+      <button onClick = { () => setGoToRegister(true)} className="fade">Register</button>
+      <button onClick = { () => setGoToLogin(true)} className="login-button" >Login</button>
     </div>
   );
 }
