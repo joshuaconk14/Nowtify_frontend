@@ -4,6 +4,7 @@ import Home from "./pages/home";
 import Login from "./pages/login";
 import Register from "./pages/register";
 import Dashboard from "./pages/dashboard";
+import SpotAuth from "./pages/spotauth";
 
 // , {useState, useEffect}
 
@@ -17,6 +18,7 @@ function App() {
           <Route path= "/login" element={<Login />} />
           <Route path= "/register" element={<Register />} />
           <Route path= "/dashboard" element={<Dashboard />} />
+          <Route path= "/spotauth" element={<SpotAuth />} />
         </Routes>
       </Router>
     </div>

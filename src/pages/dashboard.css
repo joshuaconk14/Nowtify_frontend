@@ -1,18 +1,92 @@
 .hello {
-    position: relative;
-    bottom: 250px
+  position: relative;
+  bottom: 250px
 }
 
 .welcome {
-    position: relative;
-    bottom: 270px
+  position: relative;
+  bottom: 270px
 }
 
 .logout {
-    position: absolute; /* wont be affected by other elements */
-    top: 10px;
-    right: 20px;
-    width: 80px;
-    padding: 10px 0;
-    font-size: 1.0em;
+  position: absolute; /* wont be affected by other elements */
+  top: 10px;
+  right: 20px;
+  width: 80px;
+  padding: 10px 0;
+  font-size: 1.0em;
+}
+
+
+.spotify-login-button {
+  position: relative;
+  top: 210px;
+  left: 295px;
+  display: block; /* buttons displayed vertically (column form) */
+  margin: 20px auto; /* padding */
+  padding: 10px 0; /* Removes padding on sides to maintain fixed width */
+  width: 300px;
+  height: 60px;
+  border: none;
+  font-family: 'Arial';
+  border-radius: 20px;
+  box-shadow: none;
+
+  /* text */
+  text-align: center;
+  background-color: rgb(41, 224, 41);
+  color: black;
+  font-size: 1.2em;
+}
+
+
+
+
+
+
+
+
+
+/* dashboard.css */
+.playlists-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  margin-top: 20px;
+}
+
+.playlist-card {
+  background-color: #f0f0f0; /* Light gray background */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Padding inside the card */
+  width: 200px; /* Fixed width for cards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.2s; /* Animation for hover effect */
+  text-align: center; /* Center text */
+}
+
+.playlist-card:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.playlist-image {
+  width: 100%; /* Make image responsive */
+  border-radius: 4px; /* Rounded corners for images */
+}
+
+.playlist-title {
+  font-size: 1.2em; /* Title font size */
+  margin: 10px 0; /* Margin around title */
+}
+
+.open-spotify {
+  display: inline-block; /* Make link a block element */
+  margin-top: 10px; /* Margin above link */
+  color: #1DB954; /* Spotify green */
+  text-decoration: none; /* Remove underline */
+}
+
+.open-spotify:hover {
+  text-decoration: underline; /* Underline on hover */
 }

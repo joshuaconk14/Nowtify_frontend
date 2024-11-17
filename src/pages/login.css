@@ -90,26 +90,6 @@
     color: white;
 }
 
-.spotify-login-button {
-    position: relative;
-    top: 210px;
-    left: 295px;
-    display: block; /* buttons displayed vertically (column form) */
-    margin: 20px auto; /* padding */
-    padding: 10px 0; /* Removes padding on sides to maintain fixed width */
-    width: 300px;
-    height: 60px;
-    border: none;
-    font-family: 'Arial';
-    border-radius: 20px;
-    box-shadow: none;
-
-    /* text */
-    text-align: center;
-    background-color: rgb(41, 224, 41);
-    color: black;
-    font-size: 1.2em;
-}
 
 .error-msg {
     position: relative;

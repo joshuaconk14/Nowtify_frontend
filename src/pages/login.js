@@ -12,8 +12,6 @@ function Login() {
   const [error, setError] = useState(''); // used in handleLogin funciton
   const navigate = useNavigate(); // used in if statment for 200 status
 
-  // state variable for spotify login
-  const [goToUserAuth, setGoToUserAuth] = React.useState(false)
 
   // constant for handling login functions
     // async allows constant to handle functions that take time (for this, an API call)
@@ -41,13 +39,26 @@ function Login() {
     }
   };
 
+  // const handleSpotify = async (e) => {
+  //   try {
+  //     e.preventDefault() // make it so that page doesn't refresh after login so error msg can stay
+  //     // Send login request
+  //     const response = await axios.get(
+  //       'http://127.0.0.1:5003/spotify-login',
+  //       { withCredentials: true } // Keep session active by allowing cookies
+  //     );
 
-  // use window.location.href when linking to pages in diff venv
-  // return null says to React don't run anything w < Navigate />
-    // window.location.href will handle redirection
-  if (goToUserAuth) {
-    window.location.href = "http://127.0.0.1:5003/spotify-login";
-  }
+  //     if (response.status === 200) {
+  //       navigate('/dashboard'); // Redirect to dashboard on successful login
+  //       console.log('Login successful:', response.data);
+  //     }
+  //   } catch (error) {
+  //     if (error.response && error.response.status === 401) {
+  //       setError('Invalid username or password.');
+  //     }
+  //   }
+  // };
+
 
 
   return (
@@ -81,9 +92,6 @@ function Login() {
           </button>
           {error && <p className="error-msg">{error}</p>}
         </form>
-        <button onClick={() => setGoToUserAuth(true)} className ="spotify-login-button">
-          Login through Spotify
-          </button>
       </div>
     </div>
   );
