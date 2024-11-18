@@ -39,26 +39,6 @@ function Login() {
     }
   };
 
-  // const handleSpotify = async (e) => {
-  //   try {
-  //     e.preventDefault() // make it so that page doesn't refresh after login so error msg can stay
-  //     // Send login request
-  //     const response = await axios.get(
-  //       'http://127.0.0.1:5003/spotify-login',
-  //       { withCredentials: true } // Keep session active by allowing cookies
-  //     );
-
-  //     if (response.status === 200) {
-  //       navigate('/dashboard'); // Redirect to dashboard on successful login
-  //       console.log('Login successful:', response.data);
-  //     }
-  //   } catch (error) {
-  //     if (error.response && error.response.status === 401) {
-  //       setError('Invalid username or password.');
-  //     }
-  //   }
-  // };
-
 
 
   return (

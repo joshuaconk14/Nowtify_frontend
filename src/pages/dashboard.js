@@ -49,8 +49,6 @@ function Dashboard() {
       console.log(response.data.playlists); // *** test for response ***
       if (response.status === 200) {
         setPlaylists(response.data.playlists); // call setPlaylists function and give state var the playlist data
-      } else {
-        window.location.href = '/login'; // Redirect if not logged in
       }
     } catch (error) {
       console.error("Error fetching playlists:", error);
@@ -83,7 +81,7 @@ function Dashboard() {
   const [goToUserAuth, setGoToUserAuth] = React.useState(false)
 
   // redirect for spotify login
-  if (goToUserAuth) {
+  if (goToUserAuth === true) {
     navigate("/spotauth");
     // window.location.href = "http://127.0.0.1:5003/spotify-login";
   }
@@ -97,7 +95,7 @@ function Dashboard() {
       <button type="button" onClick={logout} className="logout">
         Logout
       </button>
-      <h3>Your Playlists</h3>
+      <h3 className="your-playlists">Your Playlists</h3>
       <div className="playlists-container">
         {Array.isArray(playlists) && playlists.length > 0 ? (
           playlists.map(playlist => (
@@ -108,10 +106,10 @@ function Dashboard() {
             </div>
           ))
         ) : (
-          <p>No playlists found.</p>
+          <p className="no-playlists">No playlists found.</p>
         )}
       </div>
-      <button onClick= {setGoToUserAuth} className ="spotify-login-button">
+      <button onClick= {() => setGoToUserAuth(true)} className ="spotify-connect-button">
           Connect Spotify Playlists
           </button>
     </div>
