@@ -31,15 +31,7 @@ function Register() {
     }
   };
 
-    // state variable for spotify login
-const [goToUserAuth, setGoToUserAuth] = React.useState('')
 
-// // use window.location.href when linking to pages in diff venv
-// // return null says to React don't run anything w < Navigate />
-//   // window.location.href will handle redirection
-if (goToUserAuth) {
-  window.location.href = "http://127.0.0.1:5003/spotify-login";
-}
 
   return (
     <div className="container">

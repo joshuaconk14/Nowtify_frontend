@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
 
+
 function SpotAuth() {
   useEffect(() => {
     const fetchAuthUrl = async () => {
@@ -19,6 +20,7 @@ function SpotAuth() {
 
     fetchAuthUrl();
   }, []);
+
 
   return (
     <div>

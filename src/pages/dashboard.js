@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './dashboard.css';
 
 function Dashboard() {
@@ -36,6 +36,18 @@ function Dashboard() {
 
 
 
+  const location = useLocation();
+
+  useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    const accessToken = queryParams.get('access_token');
+
+    if (accessToken) {
+      // Store the access token in state or context, or use it to fetch playlists
+      console.log('Access Token:', accessToken);
+      // You can now use this token to fetch playlists or store it in your app's state
+    }
+  }, [location]);
 
 
 
