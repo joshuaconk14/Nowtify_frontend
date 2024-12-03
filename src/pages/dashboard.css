@@ -72,7 +72,8 @@
 .your-playlists {
   font-size: 1.5em;
   color: white;
-  margin-right: 730px; /* Pushes the button to the right edge */
+  margin: 20px auto; /* Pushes the button to the right edge */ /* Pushes the button to the right edge */
+  margin-right: 410px;
 }
 
 
