@@ -4,9 +4,15 @@ import axios from 'axios';
 
 function SpotAuth() {
   useEffect(() => {
+
+    // Set the base URL for the API
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5003';
+
+
+    
     const fetchAuthUrl = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:5003/spotify-login');
+        const response = await axios.get(`${API_BASE_URL}/spotify-login`);
         const authUrl = response.data.auth_url; // auth_url is the URL from the backend where user authenticates, was returned as a jsonify object in backend
 
         // Redirect to the Spotify authorization URL
@@ -25,7 +31,7 @@ function SpotAuth() {
   return (
     <div>
       <h3>Redirecting to Spotify for authentication...</h3>
-      <p>If you are not redirected, <a href="http://127.0.0.1:5003/spotify-login">click here</a>.</p>
+      <p>If you are not redirected, <a href={`${API_BASE_URL}/spotify-login`}>click here</a>.</p>
     </div>
   );
 }

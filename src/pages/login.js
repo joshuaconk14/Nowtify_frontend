@@ -13,6 +13,11 @@ function Login() {
   const navigate = useNavigate(); // used in if statment for 200 status
 
 
+
+  // Set the base URL for the API
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5003';
+
+
   // constant for handling login functions
     // async allows constant to handle functions that take time (for this, an API call)
       // pair it with await so can only move to next line of code until API call is complete
@@ -23,7 +28,7 @@ function Login() {
       e.preventDefault() // make it so that page doesn't refresh after login so error msg can stay
       // Send login request
       const response = await axios.post(
-        'http://127.0.0.1:5003/user-login',
+        `${API_BASE_URL}/user-login`,
         { username, password }, // data sent in the POST request w/ 'username' and 'password' properties. will be sent as JSON and must match w/ backend request
         { withCredentials: true } // Keep session active by allowing cookies
       );

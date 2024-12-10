@@ -10,11 +10,18 @@ function Register() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+
+
+  // Set the base URL for the API
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5003';
+
+  
+
   const handleRegister = async (e) => {
     try {
       e.preventDefault()
       const response = await axios.post(
-        'http://127.0.0.1:5003/register', // POST to backend
+        `${API_BASE_URL}/register`, // POST to backend
         { username, password },
         { withCredentials: true }
       );

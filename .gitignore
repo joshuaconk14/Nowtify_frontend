@@ -17,3 +17,6 @@ Thumbs.db
 
 # venv
 venv/
+
+# node modules
+node_modules/
