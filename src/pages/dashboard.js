@@ -43,7 +43,7 @@ function Dashboard() {
 
 
   useEffect(() => {
-    const queryParams = new URLSearchParams(location.search);
+    const queryParams = new URLSearchParams(window.location.search);
     const code = queryParams.get('code');
 
     if (code) {
@@ -61,7 +61,7 @@ function Dashboard() {
                 console.error('Error during callback:', error);
             });
     }
-  }, [location]);
+  }, [window.location.search]);
 
   const fetchPlaylists = async () => {
       try {
